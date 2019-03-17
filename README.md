@@ -15,7 +15,7 @@ Or, with the provided `docker-compose`:
 
 ```
 $ docker-compose build
-$ docker-compose run bash
 $ docker-compose run test
+$ docker-compose run bash
 ```
 
