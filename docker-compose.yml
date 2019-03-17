@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  bash: &default
+    build: .
+    image: dannyben/ruby-git-compose
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ./app:/app
+    command: bash
+    environment:
+      DOCKER_USER:
+      DOCKER_PASS:
+
+  test:
+    <<: *default
+    command: /app/test.sh
